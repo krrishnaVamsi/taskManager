@@ -7,7 +7,7 @@
       (ngSubmit)="onSubmit()"
     >
       <div class="formLabel">
-        <div class="formInput">
+        <div class="desc">
           <label class="primary-text" for="taskName">Task Name</label>
           <input
             class="inp"
@@ -16,7 +16,7 @@
             formControlName="taskName"
           />
         </div>
-        <div class="formInput">
+        <div class="desc">
           <label class="primary-text" for="description">Description</label>
           <textarea
             class="inp"
@@ -24,7 +24,7 @@
             formControlName="description"
           ></textarea>
         </div>
-        <div class="formInput">
+        <div class="desc">
           <label class="primary-text" for="dueDate">Due Date</label>
           <input
             class="inp"
@@ -93,7 +93,7 @@
     <ng-container *ngIf="editToggle" (ngSubmit)="save()">
       <h2 class="py-4">Edit Task</h2>
       <form [formGroup]="taskForm">
-        <div class="form-group row">
+        <div class="desc">
           <label for="brand" class="col-sm-2 col-form-label">Task Name</label>
           <div class="col-sm-6">
             <input
@@ -104,8 +104,8 @@
             />
           </div>
         </div>
-        <div class="form-group row">
-          <label for="model" class="col-sm-2 col-form-label">Description</label>
+        <div class="desc">
+          <label for="model">Description</label>
           <div class="col-sm-6">
             <textarea
               class="inp"
@@ -114,7 +114,7 @@
             ></textarea>
           </div>
         </div>
-        <div class="form-group row">
+        <div class="desc">
           <label for="year" class="col-sm-2 col-form-label">dueDate</label>
           <div class="col-sm-3">
             <input
@@ -296,7 +296,7 @@
     </table>
   </div>
   <div class="container">
-    <button type="button" class="" (click)="AddNewTask()">
+    <button type="button" class="" *ngIf="!toggleForm" (click)="AddNewTask()">
       <svg
         height="25px"
         width="25px"

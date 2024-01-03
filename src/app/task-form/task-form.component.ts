@@ -40,7 +40,7 @@ export class TaskFormComponent implements OnInit {
     });
 
     this.taskService.getTasks().subscribe((tasks) => {
-      this.tasks = tasks;
+      this.tasks = tasks.reverse();
       console.log('Initial load', this.tasks);
     });
 
@@ -62,7 +62,7 @@ export class TaskFormComponent implements OnInit {
     // console.log(this.taskForm)
     this.taskService.save(this.taskForm.value, this.editIndex);
     this.taskService.getTasks().subscribe((tasks) => {
-      this.tasks = tasks;
+      this.tasks = tasks.reverse();
       this.editToggle = false;
       // console.log(tasks)
     });
@@ -90,7 +90,7 @@ export class TaskFormComponent implements OnInit {
       this.taskService.addTask(this.taskForm.value);
       console.log(this.taskService);
       this.taskService.getTasks().subscribe((tasks) => {
-        this.tasks = tasks;
+        this.tasks = tasks.reverse();
       });
       // this.route.navigate(['/task-list'])
       this.taskForm.reset();

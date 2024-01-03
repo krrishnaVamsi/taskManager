@@ -123,3 +123,7 @@ table {
   max-height: 12rem;
   overflow-y: auto;
 }
+.desc{
+  display: flex;
+  align-items: center;
+}

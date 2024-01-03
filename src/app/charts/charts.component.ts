@@ -60,7 +60,7 @@ export class ChartsComponent implements OnInit {
 
   ngOnInit() {
     this.taskService.getTasks().subscribe((tasks) => {
-      this.tasks = tasks;
+      this.tasks = tasks.reverse();
     });
     this.title = { text: 'No of Tasks Due' };
     (this.colors = ['#ff006e']),
