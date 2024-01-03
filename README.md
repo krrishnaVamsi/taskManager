@@ -14,4 +14,8 @@ npm install
 ng serve
 
 ```
+## Live Demo
+[click here](https://taskmanager-charts.netlify.app)
+
+
 
