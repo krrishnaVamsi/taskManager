@@ -1,0 +1,22 @@
+<div id="container" (click)="toggleContainer()">
+  <div class="inner-container">
+    <div class="toggle">
+      <p>Chart</p>
+    </div>
+    <div class="toggle">
+      <p>List</p>
+    </div>
+  </div>
+  <div
+    class="inner-container"
+    id="toggle-container"
+    [ngStyle]="toggleContainerStyle"
+  >
+    <div class="toggle">
+      <p>Chart</p>
+    </div>
+    <div class="toggle">
+      <p>List</p>
+    </div>
+  </div>
+</div>
